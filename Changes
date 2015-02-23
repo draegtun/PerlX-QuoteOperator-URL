@@ -2,3 +2,4 @@ Revision history for PerlX-QuoteOperator-URL
 
 {{$NEXT}}
         - Initial release
+        - Ripped out of PerlX::QuoteOperator (at 0.05)

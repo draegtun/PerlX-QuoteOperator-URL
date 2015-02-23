@@ -1,7 +1,8 @@
 requires 'perl', '5.008005';
-
-# requires 'Some::Module', 'VERSION';
+requires 'PerlX::QuoteOperator', '0.05';
+requires 'LWP::Simple';
 
 on test => sub {
-    requires 'Test::More', '0.96';
+    requires 'Test::More';
+    requires 'Directory::Scratch';
 };
