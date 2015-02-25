@@ -44,7 +44,8 @@
       },
       "test" : {
          "requires" : {
-            "Directory::Scratch" : "0",
+            "URI::file" : "0",
+            "File::Temp" : "0",
             "Test::More" : "0"
          }
       }
