@@ -62,7 +62,7 @@
          "web" : "https://github.com/draegtun/PerlX-QuoteOperator-URL"
       }
    },
-   "version" : "1.00",
+   "version" : "1.01",
    "x_contributors" : [
       "Barry Walsh <draegtun@googlemail.com>",
       "Brian Rossmajer <BrianRossmajer@users.noreply.github.com>"

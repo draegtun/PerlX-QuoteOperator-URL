@@ -4,7 +4,7 @@ use warnings;
 use PerlX::QuoteOperator ();
 use LWP::Simple ();
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 sub import {
     my ($class, $name) = @_;
@@ -28,7 +28,7 @@ PerlX::QuoteOperator::URL - Quote-like operator returning http request for the U
 
 =head1 VERSION
 
-Version 1.00
+Version 1.01
 
 =head1 SYNOPSIS
 
@@ -69,17 +69,25 @@ Standard import subroutine.
 
 =head1 SEE ALSO
 
+NB. This module use to be part of the PerlX::QuoteOperator distro.  It was removed at 0.05 (23rd Feb 2015)
+
 =over 4
 
 =item * L<PerlX::QuoteOperator>
 
-=item * L<ACME::Url>
+=item * L<Acme::URL>
 
 =item * L<http://transfixedbutnotdead.com/2009/12/16/url-develdeclare-and-no-strings-attached/>
 
 =item * L<http://transfixedbutnotdead.com/2009/12/26/couple-of-cpan-pressies/>
 
 =back
+
+
+=head1 CONTRIBUTORS
+
+BrianRossmajer (https://github.com/BrianRossmajer) for Directory::Scratch removal patch at 1.01
+
 
 
 =head1 AUTHOR
@@ -106,9 +114,9 @@ You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker
+=item * Github issues for bugs/sugs
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=PerlX-QuoteOperator-URL>
+L<https://github.com/draegtun/PerlX-QuoteOperator-URL/issues>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 

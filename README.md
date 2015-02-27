@@ -4,7 +4,7 @@ PerlX::QuoteOperator::URL - Quote-like operator returning http request for the U
 
 # VERSION
 
-Version 1.00
+Version 1.01
 
 # SYNOPSIS
 
@@ -43,10 +43,16 @@ Standard import subroutine.
 
 # SEE ALSO
 
+NB. This module use to be part of the PerlX::QuoteOperator distro.  It was removed at 0.05 (23rd Feb 2015)
+
 - [PerlX::QuoteOperator](https://metacpan.org/pod/PerlX::QuoteOperator)
-- [ACME::Url](https://metacpan.org/pod/ACME::Url)
+- [Acme::URL](https://metacpan.org/pod/Acme::URL)
 - [http://transfixedbutnotdead.com/2009/12/16/url-develdeclare-and-no-strings-attached/](http://transfixedbutnotdead.com/2009/12/16/url-develdeclare-and-no-strings-attached/)
 - [http://transfixedbutnotdead.com/2009/12/26/couple-of-cpan-pressies/](http://transfixedbutnotdead.com/2009/12/26/couple-of-cpan-pressies/)
+
+# CONTRIBUTORS
+
+BrianRossmajer (https://github.com/BrianRossmajer) for Directory::Scratch removal patch at 1.01
 
 # AUTHOR
 
@@ -66,9 +72,9 @@ You can find documentation for this module with the perldoc command.
 
 You can also look for information at:
 
-- RT: CPAN's request tracker
+- Github issues for bugs/sugs
 
-    [http://rt.cpan.org/NoAuth/Bugs.html?Dist=PerlX-QuoteOperator-URL](http://rt.cpan.org/NoAuth/Bugs.html?Dist=PerlX-QuoteOperator-URL)
+    [https://github.com/draegtun/PerlX-QuoteOperator-URL/issues](https://github.com/draegtun/PerlX-QuoteOperator-URL/issues)
 
 - AnnoCPAN: Annotated CPAN documentation
 

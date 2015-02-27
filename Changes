@@ -1,6 +1,9 @@
 Revision history for PerlX-QuoteOperator-URL
 
 {{$NEXT}}
+        - Patch from BrianRossmajer removing Directory::Scratch (deprecated module)
+        - https://github.com/draegtun/PerlX-QuoteOperator-URL/pull/1
+        - Tidied up pod (docs)
 
 1.00  2015-02-23 18:58:11 GMT
         - Initial release
