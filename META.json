@@ -44,9 +44,9 @@
       },
       "test" : {
          "requires" : {
-            "URI::file" : "0",
             "File::Temp" : "0",
-            "Test::More" : "0"
+            "Test::More" : "0",
+            "URI::File" : "0"
          }
       }
    },
@@ -64,7 +64,8 @@
    },
    "version" : "1.00",
    "x_contributors" : [
-      "Barry Walsh <draegtun@googlemail.com>"
+      "Barry Walsh <draegtun@googlemail.com>",
+      "Brian Rossmajer <BrianRossmajer@users.noreply.github.com>"
    ]
 }
 
