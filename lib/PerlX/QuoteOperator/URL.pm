@@ -98,11 +98,7 @@ Barry Walsh, C<< <draegtun at cpan.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-perlx-quoteoperator at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=PerlX-QuoteOperator-URL>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-
+Please report any bugs or feature requests to L<https://github.com/draegtun/PerlX-QuoteOperator-URL/issues>
 
 
 =head1 SUPPORT
@@ -116,7 +112,7 @@ You can also look for information at:
 
 =over 4
 
-=item * Github issues for bugs/sugs
+=item * Github issues and pull requests
 
 L<https://github.com/draegtun/PerlX-QuoteOperator-URL/issues>
 
