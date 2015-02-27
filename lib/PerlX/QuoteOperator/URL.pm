@@ -4,7 +4,7 @@ use warnings;
 use PerlX::QuoteOperator ();
 use LWP::Simple ();
 
-our $VERSION = '1.01';
+our $VERSION = '1.02';
 
 sub import {
     my ($class, $name) = @_;
@@ -28,7 +28,7 @@ PerlX::QuoteOperator::URL - Quote-like operator returning http request for the U
 
 =head1 VERSION
 
-Version 1.01
+Version 1.02
 
 =head1 SYNOPSIS
 
@@ -39,7 +39,9 @@ Version 1.01
 
 =head1 DESCRIPTION
 
-For more info see L<PerlX::QuoteOperator::URL>.
+This module provides a Quote-like operator which returns a HTTP request using the  LWP::Simple module.
+
+Please see L<PerlX::QuoteOperator> for more detail on Quote-like operators.
 
 For now here is another example:
 
@@ -86,7 +88,7 @@ NB. This module use to be part of the PerlX::QuoteOperator distro.  It was remov
 
 =head1 CONTRIBUTORS
 
-BrianRossmajer (https://github.com/BrianRossmajer) for Directory::Scratch removal patch at 1.01
+Brian Rossmajer (https://github.com/BrianRossmajer) for Directory::Scratch removal patch at 1.01
 
 
 
