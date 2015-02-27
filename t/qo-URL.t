@@ -1,42 +1,62 @@
 #!perl -T
 
-use Test::More tests => 3;
+use Test::More tests => 4;
 
-use Directory::Scratch;
-use constant WIN32 => $^O eq 'MSWin32';
+use File::Temp qw( tempfile );
+use URI::file;
+use LWP::Simple qw( get );
 
-my $tmpfile = 'qURL';
-my $tmp  = Directory::Scratch->new;
+my ($temp_fh, $temp_filename) = tempfile( 
+    'Deleteme-Perl_QuoteOperator-URL-test-XXXX',
+    TMPDIR => 1, 
+    UNLINK => 1 );
+print $temp_fh stuff();
+close $temp_fh;
 
-local $, = '!'; # touch uses the value of $, 
+my $url = URI::file->new_abs( $temp_filename );
 
-my $file = $tmp->touch( $tmpfile, stuff() );
-
-
-my $url  = 'file://localhost' . sub {
-    return $_[0]->as_foreign('Unix') if WIN32;
-    return $_[0]->stringify;
-}->( $file );
-
-$url =~ s!\\!/!g if WIN32; # fixin \
+my $stuff = stuff();
 
 # default test
 use PerlX::QuoteOperator::URL;
-is qURL/$url/, test_stuff(), 'qURL testing file:// content';
+is qURL/$url/, $stuff, 'qURL testing file:// content';
 
 # renamed to qh
 use PerlX::QuoteOperator::URL 'qh';
-is qh{$url}, test_stuff(), 'qh testing file:// content';
+is qh{$url}, $stuff, 'qh testing file:// content';
 
 # re-test default again but with ()
-is qURL($url), test_stuff(), 'qURL() testing file:// content';
+is qURL($url), $stuff, 'qURL() testing file:// content';
 
-# clear up scratch
-$tmp->delete( $tmpfile ) or diag "Issue removing tmp file ($file)";
-undef $tmp; # everything else is removed
+SKIP: {
+    my $example_url = 'http://example.com/';
+    my $example_org = undef;
 
-# ! instead of \n
-sub test_stuff { stuff() . "!" }
+    eval { 
+	$example_org = get( $example_url );
+	my $example_org_2 = get( $example_url );
+
+	unless ( defined( $example_org ) )
+	{
+	    die "GET $example_url failed, perhaps no internet connection available\n";
+	}
+
+	unless ( $example_org =~ /\S/ )
+	{
+	    die "Example URL has no content, can not be used to test\n";
+	}
+
+	unless ( $example_org eq $example_org_2 )
+	{
+	    die "Example URL has dynamic content, can not be used to test\n";
+	}
+    };
+
+    diag "\n","Skipping web test\n",$@ if $@;
+    skip $@, 1 if $@;
+
+    is qURL($example_url), $example_org, 'qURL() testing web content';
+}
 
 sub stuff {
     join "!", (
