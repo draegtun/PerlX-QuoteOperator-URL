@@ -5,5 +5,5 @@ requires 'LWP::Simple';
 on test => sub {
     requires 'Test::More';
     requires 'File::Temp';
-    requires 'URI::File';
+    requires 'URI::file';
 };

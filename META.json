@@ -46,7 +46,7 @@
          "requires" : {
             "File::Temp" : "0",
             "Test::More" : "0",
-            "URI::File" : "0"
+            "URI::file" : "0"
          }
       }
    },
