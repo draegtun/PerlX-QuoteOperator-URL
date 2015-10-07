@@ -1,6 +1,8 @@
 Revision history for PerlX-QuoteOperator-URL
 
 {{$NEXT}}
+
+1.02  2015-10-07 13:08:19 BST
         - Typo in cpanfile from PR1 (issue #2)
 
 
